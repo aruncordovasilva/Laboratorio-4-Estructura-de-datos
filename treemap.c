@@ -49,7 +49,7 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
     }
     nuevo->root = NULL;
     nuevo->current = NULL;
-    nuevo->(*lower_than) (void* key1, void* key2) = NULL;
+    nuevo->((*lower_than) (void* key1, void* key2)) = NULL;
     return nuevo;
 }
 
