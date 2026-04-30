@@ -115,3 +115,17 @@ Thu Apr 30 08:20:33 PM UTC 2026:
  tests:  4|7
 total_score: 5/60
 14c2ece
+Thu Apr 30 08:35:50 PM UTC 2026: 
+ treemap.c | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:63:5: error: ‘Aux’ undeclared (first use in this function)
+   63 |     Aux = tree->current;
+      |     ^~~
+treemap.c:63:5: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:66:13: error: implicit declaration of function ‘lower_than’ [-Wimplicit-function-declaration]
+   66 |         if((lower_than(key,key2) == 0) && (lower_than(key2,key) == 0)){
+      |             ^~~~~~~~~~
+7a774d9
