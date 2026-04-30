@@ -47,8 +47,9 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
     if(nuevo == NULL){
         return 0;
     }
-    nuevo->root = lower_than;
+    nuevo->root = NULL;
     nuevo->current = NULL;
+    nuevo->(*lower_than) (void* key1, void* key2) = NULL;
     return nuevo;
 }
 
