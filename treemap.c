@@ -61,20 +61,20 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     if(tree == NULL) return NULL;
     tree->current = tree->root;
     TreeNode* Aux = tree->current;
-    void* key2 = Aux->Pair->key;
+    void* key2 = Aux->pair->key;
     while(Aux != NULL){
         if((lower_than(key,key2) == 0) && (lower_than(key2,key) == 0)){
             tree->current = Aux;
-            return Aux->Pair;
+            return Aux->pair;
         }
         else{
             if(lower_than(key,key2) == 1){
             Aux = Aux->left;
-            key2 = Aux->Pair->key;
+            key2 = Aux->pair->key;
             }
             else {
                 Aux = Aux->right;
-                key2 = Aux->Pair->key;
+                key2 = Aux->pair->key;
             }
         }
     }
