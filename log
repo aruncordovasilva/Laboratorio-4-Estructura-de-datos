@@ -98,3 +98,14 @@ Thu Apr 30 08:19:10 PM UTC 2026:
  tests:  3|8
 total_score: 0/60
 089da67
+Thu Apr 30 08:19:32 PM UTC 2026: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:52:25: error: ‘lt’ undeclared (first use in this function)
+   52 |     nuevo->lower_than = lt;
+      |                         ^~
+treemap.c:52:25: note: each undeclared identifier is reported only once for each function it appears in
+e671c41
