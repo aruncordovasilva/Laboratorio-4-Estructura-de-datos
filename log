@@ -165,3 +165,14 @@ treemap.c:66:13: error: implicit declaration of function ‘lower_than’ [-Wimp
    66 |         if((lower_than(key,key2) == 0) && (lower_than(key2,key) == 0)){
       |             ^~~~~~~~~~
 8dd130e
+Thu Apr 30 08:37:48 PM UTC 2026: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:66:13: error: ‘map’ undeclared (first use in this function)
+   66 |         if((map->lower_than(key,key2) == 0) && (map->lower_than(key2,key) == 0)){
+      |             ^~~
+treemap.c:66:13: note: each undeclared identifier is reported only once for each function it appears in
+6321822
