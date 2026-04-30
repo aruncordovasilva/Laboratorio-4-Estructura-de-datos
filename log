@@ -1,0 +1,25 @@
+Thu Apr 30 08:11:45 PM UTC 2026: 
+ treemap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:46:46: error: ‘Treemap’ undeclared (first use in this function); did you mean ‘TreeMap’?
+   46 |     TreeMap* nuevo = (TreeMap*)malloc(sizeof(Treemap));
+      |                                              ^~~~~~~
+      |                                              TreeMap
+treemap.c:46:46: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:47:26: error: ‘key2’ undeclared (first use in this function)
+   47 |     nuevo->root->right = key2;
+      |                          ^~~~
+treemap.c:48:25: error: ‘key1’ undeclared (first use in this function)
+   48 |     nuevo->root->left = key1;
+      |                         ^~~~
+treemap.c: At top level:
+treemap.c:54:5: error: expected identifier or ‘(’ before ‘return’
+   54 |     return NULL;
+      |     ^~~~~~
+treemap.c:55:1: error: expected identifier or ‘(’ before ‘}’ token
+   55 | }
+      | ^
+58b02f1
