@@ -1,0 +1,29 @@
+modules = ["bash", "nix"]
+[agent]
+expertMode = true
+
+[nix]
+channel = "stable-25_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Run TreeMap"
+
+[[workflows.workflow]]
+name = "Run TreeMap"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "gcc main.c treemap.c -o main && ./main"
+
+[workflows.workflow.metadata]
+outputType = "console"
