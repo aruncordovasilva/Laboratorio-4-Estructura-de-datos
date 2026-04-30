@@ -63,12 +63,12 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     TreeNode* Aux = tree->current;
     void* key2 = Aux->pair->key;
     while(Aux != NULL){
-        if((map->lower_than(key,key2) == 0) && (map->lower_than(key2,key) == 0)){
+        if((tree->lower_than(key,key2) == 0) && (tree->lower_than(key2,key) == 0)){
             tree->current = Aux;
             return Aux->pair;
         }
         else{
-            if(map->lower_than(key,key2) == 1){
+            if(tree->lower_than(key,key2) == 1){
             Aux = Aux->left;
             key2 = Aux->pair->key;
             }
