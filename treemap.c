@@ -70,10 +70,12 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
         else{
             if(tree->lower_than(key,key2) == 1){
             Aux = Aux->left;
+            if(Aux == NULL) return NULL;
             key2 = Aux->pair->key;
             }
             else {
-                Aux = Aux->right;
+                Aux = Aux->right; 
+                if(Aux == NULL) return NULL;
                 key2 = Aux->pair->key;
             }
         }
