@@ -129,3 +129,29 @@ treemap.c:66:13: error: implicit declaration of function ‘lower_than’ [-Wimp
    66 |         if((lower_than(key,key2) == 0) && (lower_than(key2,key) == 0)){
       |             ^~~~~~~~~~
 7a774d9
+Thu Apr 30 08:36:30 PM UTC 2026: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:64:23: error: ‘TreeNode’ has no member named ‘Pair’; did you mean ‘pair’?
+   64 |     void* key2 = Aux->Pair->key;
+      |                       ^~~~
+      |                       pair
+treemap.c:66:13: error: implicit declaration of function ‘lower_than’ [-Wimplicit-function-declaration]
+   66 |         if((lower_than(key,key2) == 0) && (lower_than(key2,key) == 0)){
+      |             ^~~~~~~~~~
+treemap.c:68:25: error: ‘TreeNode’ has no member named ‘Pair’; did you mean ‘pair’?
+   68 |             return Aux->Pair;
+      |                         ^~~~
+      |                         pair
+treemap.c:73:25: error: ‘TreeNode’ has no member named ‘Pair’; did you mean ‘pair’?
+   73 |             key2 = Aux->Pair->key;
+      |                         ^~~~
+      |                         pair
+treemap.c:77:29: error: ‘TreeNode’ has no member named ‘Pair’; did you mean ‘pair’?
+   77 |                 key2 = Aux->Pair->key;
+      |                             ^~~~
+      |                             pair
+4abc894
