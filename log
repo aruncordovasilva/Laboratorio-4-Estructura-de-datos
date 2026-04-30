@@ -23,3 +23,24 @@ treemap.c:55:1: error: expected identifier or ‘(’ before ‘}’ token
    55 | }
       | ^
 58b02f1
+Thu Apr 30 08:12:25 PM UTC 2026: 
+ treemap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:50:26: error: ‘key2’ undeclared (first use in this function)
+   50 |     nuevo->root->right = key2;
+      |                          ^~~~
+treemap.c:50:26: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:51:25: error: ‘key1’ undeclared (first use in this function)
+   51 |     nuevo->root->left = key1;
+      |                         ^~~~
+treemap.c: At top level:
+treemap.c:57:5: error: expected identifier or ‘(’ before ‘return’
+   57 |     return NULL;
+      |     ^~~~~~
+treemap.c:58:1: error: expected identifier or ‘(’ before ‘}’ token
+   58 | }
+      | ^
+efe73a6
