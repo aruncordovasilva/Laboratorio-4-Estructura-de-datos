@@ -50,11 +50,6 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
     nuevo->root = NULL;
     nuevo->current = NULL;
     return nuevo;
-    }
-
-    
-    //map->lower_than = lower_than;
-    return NULL;
 }
 
 // 2. Implemente la función Pair* searchTreeMap(TreeMap* tree, void* key), 
