@@ -271,3 +271,8 @@ treemap.c:149:59: error: assignment to ‘TreeNode *’ from ‘int’ makes poi
   149 |         if(node == node->parent->left) node->parent->left = (node->left || node->right);
       |                                                           ^
 dfaa431
+Sat May  2 08:40:53 PM UTC 2026: 
+ treemap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+ tests:  0|0
+9359163
