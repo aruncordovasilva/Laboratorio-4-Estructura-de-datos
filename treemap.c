@@ -219,8 +219,28 @@ Pair * nextTreeMap(TreeMap * tree) {
 
 Pair * upperBound(TreeMap * tree, void* key) {
     if(tree == NULL) return NULL;
+    if(tree->root == NULL) return NULL;
     Pair* punto = searchTreeMap(tree, key);
     if(punto != NULL) return punto;
+    else{
+        TreeNode* AuxN = tree->root;
+        Pair* AuxP = AuxN->pair;
+        Pair* ub_node = AuxP;
+        if(AuxN->left == NULL y AuxN->right == NULL) return AuxN->Pair;
+        while(AuxN != NULL){
+            if(tree->lower_than(key,AuxP->key) == 1){
+                ub_node = AuxP;
+                AuxN = AuxN->left;
+                AuxP = AuxN->pair;
+            }
+            else{
+                AuxN = AuxN->right;
+                AuxP = AuxN->pair;
+            }
+        }
+        return ub_node;
+        
+    }
     return NULL;
 }
 
