@@ -220,3 +220,29 @@ Sat May  2 08:21:10 PM UTC 2026:
  tests:  16|4
 total_score: 28/60
 ec0cb04
+Sat May  2 08:34:37 PM UTC 2026: 
+ treemap.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:149:42: error: expected ‘;’ before ‘}’ token
+  149 |                 node->left = node->parent
+      |                                          ^
+      |                                          ;
+  150 | 
+  151 |             }
+      |             ~                             
+treemap.c:154:42: error: expected ‘;’ before ‘}’ token
+  154 |                 node->left = node->parent
+      |                                          ^
+      |                                          ;
+  155 |             }
+      |             ~                             
+treemap.c:156:23: error: expected ‘;’ before ‘return’
+  156 |             free(node)
+      |                       ^
+      |                       ;
+  157 |             return
+      |             ~~~~~~     
+f71f033
