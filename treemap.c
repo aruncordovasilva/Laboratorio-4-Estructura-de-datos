@@ -147,9 +147,10 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     }
     else{
         if(node == node->parent->left){
-            if(node->left !=  NULL) node->parent->left = node->left;
-            else node->parent->left = node->right;
-            node->left->parent = node->parent;
+            if(node->left != NULL){
+                node->parent->left = node->left;
+                node->left->parent = node->parent;
+            }
         }
         free(node);
     }
