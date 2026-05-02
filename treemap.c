@@ -204,7 +204,7 @@ Pair * nextTreeMap(TreeMap * tree) {
         return tree->current->pair;
     }
     else if(tree->current->right != NULL){
-        tree->current = tree->current->right;
+        tree->current = minimum(tree->current);
         return tree->current->pair;
     }
     return tree->current->pair;
