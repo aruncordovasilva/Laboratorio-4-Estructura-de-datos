@@ -200,12 +200,7 @@ Pair * firstTreeMap(TreeMap * tree) {
 Pair * nextTreeMap(TreeMap * tree) {
     if(tree == NULL) return NULL;
     if(tree->current->left != NULL){
-        tree->current = minimum(tree->current);
-        return tree->current->pair;
-    }
-    else if(tree->current->right != NULL){
-        tree->current = minimum(tree->current);
-        return tree->current->pair;
+        tree->current = tree->current->left;
     }
     return tree->current->pair;
 }
