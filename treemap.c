@@ -95,10 +95,16 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     Pair* punto = searchTreeMap(tree, key);
     if(punto == NULL){
         if(tree->lower_than(key,tree->current->pair->key) == 1){
-
-            
+            tree->current->left = nuevo_nodo;
+            nuevo_nodo->parent = tree->current;
         }
+        else{
+            tree->current->right = nuevo_nodo;
+            nuevo_nodo->parent = tree->current;
+        }
+        tree->current = nuevo_nodo;
     }
+    return;
 }
 
 // 4. Implemente la función TreeNode * minimum(TreeNode * x). 
