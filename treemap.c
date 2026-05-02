@@ -231,11 +231,11 @@ Pair * upperBound(TreeMap * tree, void* key) {
             if(tree->lower_than(key,AuxP->key) == 1){
                 ub_node = AuxP;
                 AuxN = AuxN->left;
-                AuxP = AuxN->pair;
+                if(AuxN != NULL) AuxP = AuxN->pair;
             }
             else{
                 AuxN = AuxN->right;
-                AuxP = AuxN->pair;
+                if(AuxN != NULL) AuxP = AuxN->pair;
             }
         }
         return ub_node;
