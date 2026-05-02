@@ -226,7 +226,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
         TreeNode* AuxN = tree->root;
         Pair* AuxP = AuxN->pair;
         Pair* ub_node = AuxP;
-        if(AuxN->left == NULL y AuxN->right == NULL) return AuxN->pair;
+        if(AuxN->left == NULL && AuxN->right == NULL) return AuxN->pair;
         while(AuxN != NULL){
             if(tree->lower_than(key,AuxP->key) == 1){
                 ub_node = AuxP;
