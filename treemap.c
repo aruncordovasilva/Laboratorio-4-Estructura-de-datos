@@ -137,7 +137,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
             Aux->left = NULL;
         }
         else{
-            Aux->left = NULL;
+            Aux->right = NULL;
         }
         free(node);
         return;
