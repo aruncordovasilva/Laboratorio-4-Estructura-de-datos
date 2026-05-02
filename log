@@ -251,3 +251,13 @@ Sat May  2 08:35:01 PM UTC 2026:
  1 file changed, 4 insertions(+), 4 deletions(-)
  tests:  0|0
 c9a8c99
+Sat May  2 08:38:41 PM UTC 2026: 
+ treemap.c | 14 +++-----------
+ 1 file changed, 3 insertions(+), 11 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:149:45: error: assignment to ‘TreeNode *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+  149 |         if(node == node->parent->left) node = (node->left || node->right);
+      |                                             ^
+75470bd
