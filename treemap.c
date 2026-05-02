@@ -203,7 +203,7 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = minimum(tree->current->right);
     }
     else{
-        while(tree->current->parent->left != tree->current){
+        while((tree->current->parent->left != tree->current) && tree->current->parent != NULL){
             tree->current = tree->current->parent;
         }
     }
